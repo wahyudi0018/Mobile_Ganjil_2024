@@ -9,11 +9,11 @@ Kelas: 3C
 # Tugas Pemrograman Mobile Jobsheet 5
 
 ## Daftar Isi
-1. [Praktikum 1](#praktikum-1)
-2. [Praktikum 2](#praktikum-2)
-3. [Praktikum 3](#praktikum-3)
-4. [Praktikum 4](#praktikum-4)
-4. [Praktikum 5](#praktikum-5)
+- [Tugas Pemrograman Mobile Jobsheet 5](#tugas-pemrograman-mobile-jobsheet-5)
+  - [Daftar Isi](#daftar-isi)
+  - [Praktikum 1](#praktikum-1)
+  - [Praktikum 2](#praktikum-2)
+  - [Praktikum 3](#praktikum-3)
 ---
 
 ## Praktikum 1
@@ -25,9 +25,21 @@ Pembuatan projek flutter baru telah selesai
 ```
 
 ## Praktikum 2
-**Membuat projek flutter dengan nama hello_world menggunakan cmd** 
+**Menghubungkan Perangkat Android Emulator** 
 
-![P1](img/P1.png)
+![P2](img/P2.png)
 ``` text
-Pembuatan projek flutter baru telah selesai
+Android Emulator telah berhasil terhubung
+```
+
+## Praktikum 3
+**Membuat Repository GitHub dan Laporan Praktikum** 
+Langkah 1
+Beri pesan commit "tambah gitignore" lalu klik Commit (✔)
+
+![P31](img/P31.png)
+
+
+``` text
+Android Emulator telah berhasil terhubung
 ```
