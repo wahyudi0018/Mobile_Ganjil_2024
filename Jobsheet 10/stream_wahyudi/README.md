@@ -78,11 +78,35 @@ Menambahkan class NumberStream di stream.dart telah selesai.
 
 ![P23](img/soal6.gif)
 
-
 #### Jelaskan maksud kode edit initState() dan tambah method addRandomNumber() tersebut!
 
 ```text
 - initState(): Menginisialisasi objek NumberStream dan mendengarkan stream-nya untuk memperbarui lastNumber setiap kali ada data baru yang ditambahkan.
 
 - addRandomNumber(): Menambahkan angka acak dari 0 hingga 9 ke dalam stream melalui metode addNumberToSink.
+```
+
+### Langkah 3: Menambahkan error handling pada class NumberStream di stream.dart
+
+![P23](img/P23.png)
+
+```text
+Menambahkan error handling pada class NumberStream di stream.dart telah selesai.
+```
+
+### Langkah 4: Mengedit method addRandomNumber() dan initState() pada class StreamHomePageState di main.dart
+
+![P24](img/P24.png)
+
+```text
+Mengedit method addRandomNumber() dan initState() pada class StreamHomePageState di main.dart telah selesai.
+```
+
+#### Jelaskan maksud kode langkah 3 sampai 4 tersebut!
+
+![P25](img/P25.png)
+
+```text
+- Langkah 3: Menambahkan metode addError() di NumberStream untuk mengirimkan error ke stream.
+- Langkah 4: Menggunakan onError() pada listener stream untuk menangani error dan mengubah nilai lastNumber menjadi -1 saat error dan Mengubah addRandomNumber() untuk memanggil addError() dan mengirimkan error ke stream.
 ```
