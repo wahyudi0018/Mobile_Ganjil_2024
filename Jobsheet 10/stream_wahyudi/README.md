@@ -25,3 +25,19 @@ Menambahkan nama sebagai identitas hasil pekerjaan telah selesai.
 ```text
 Menambahkan 5 warna telah selesai.
 ```
+
+### Langkah 3: Menambahkan method getColors()
+
+![P13](img/P13.png)
+
+#### Jelaskan fungsi keyword yield* pada kode tersebut!
+
+```text
+yield* meneruskan elemen dari stream lain secara langsung ke stream yang dihasilkan oleh method getColors().
+```
+
+#### Apa maksud isi perintah kode tersebut?
+
+```text
+Method getColors() menghasilkan warna dari daftar colors setiap 1 detik secara berulang menggunakan Stream.periodic.
+```
