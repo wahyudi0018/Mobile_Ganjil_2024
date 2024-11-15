@@ -51,3 +51,13 @@ Method getColors() menghasilkan warna dari daftar colors setiap 1 detik secara b
 ```text
 Mengedit class _StreamHomePageState di main.dart telah selesai.
 ```
+
+### Langkah 5: Mengganti isi method changeColor() class _StreamHomePageState di main.dart
+
+![P15](img/P15.png)
+
+#### Jelaskan perbedaan menggunakan listen dan await for
+
+```text
+await for menunggu tiap item stream secara berurutan, sedangkan listen langsung menangani tiap item saat diterima tanpa menunggu.
+```
