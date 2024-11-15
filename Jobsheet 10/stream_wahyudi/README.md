@@ -61,3 +61,28 @@ Mengedit class _StreamHomePageState di main.dart telah selesai.
 ```text
 await for menunggu tiap item stream secara berurutan, sedangkan listen langsung menangani tiap item saat diterima tanpa menunggu.
 ```
+
+## Praktikum 2: Stream controllers dan sinks
+
+### Langkah 1: Menambahkan class NumberStream di stream.dart
+
+![P21](img/P21.png)
+
+```text
+Menambahkan class NumberStream di stream.dart telah selesai.
+```
+
+### Langkah 2: Mengedit class _StreamHomePageState di main.dart
+
+![P22](img/P22.png)
+
+![P23](img/soal6.gif)
+
+
+#### Jelaskan maksud kode edit initState() dan tambah method addRandomNumber() tersebut!
+
+```text
+- initState(): Menginisialisasi objek NumberStream dan mendengarkan stream-nya untuk memperbarui lastNumber setiap kali ada data baru yang ditambahkan.
+
+- addRandomNumber(): Menambahkan angka acak dari 0 hingga 9 ke dalam stream melalui metode addNumberToSink.
+```
