@@ -111,14 +111,34 @@ Mengedit method addRandomNumber() dan initState() pada class StreamHomePageState
 - Langkah 4: Menggunakan onError() pada listener stream untuk menangani error dan mengubah nilai lastNumber menjadi -1 saat error dan Mengubah addRandomNumber() untuk memanggil addError() dan mengirimkan error ke stream.
 ```
 
-### Langkah 5: Mengedit initState() pada class StreamHomePageState di main.dart
+## Praktikum 3: Injeksi data ke streams
 
-![P26](img/P26.png)
+### Langkah 1: Mengedit initState() pada class StreamHomePageState di main.dart
 
-#### Jelaskan maksud kode langkah 5 tersebut!
+![31](img/P31.png)
 
-![P27](img/soal8.gif)
+#### Jelaskan maksud kode langkah 1 tersebut!
+
+![P32](img/soal8.gif)
 
 ```text
 Kode  mengelola stream untuk menghasilkan dan mentransformasi angka acak, memodifikasi nilai angka dengan mengalikannya 10 kali, serta menampilkan angka terakhir yang dihasilkan, sambil menangani kesalahan dengan menampilkan nilai -1 jika terjadi error, dan menutup stream controller saat widget dihapus.
+```
+
+## Praktikum 4: Subscribe ke stream events
+
+### Langkah 1: Mengedit initState() pada class StreamHomePageState di main.dart
+
+![P41](img/P41.png)
+
+#### Jelaskan maksud kode langkah 1 tersebut!
+
+![P42](img/soal9.gif)
+
+```text
+- Kode subscription = stream.listen((event) {...}): Mendengarkan aliran data (stream) dari numberStreamController dan memperbarui nilai lastNumber pada tampilan setiap kali ada data baru yang diterima.  
+
+- Kode subscription.cancel(): Menghentikan langganan (subscription) stream agar tidak menerima data baru dan membebaskan sumber daya terkait.  
+
+- Kode void addRandomNumber() {...}: Menghasilkan angka acak dan mengirimkannya ke stream melalui numberStream.addNumberToSink(myNum), dengan pengecekan untuk memastikan stream belum ditutup sebelum menambahkan angka baru.  
 ```
