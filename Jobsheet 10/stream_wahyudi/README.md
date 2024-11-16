@@ -154,3 +154,17 @@ Kode  mengelola stream untuk menghasilkan dan mentransformasi angka acak, memodi
 ```text
 Error terjadi karena sebuah stream hanya dapat memiliki satu listener, sementara dalam kode tersebut terdapat dua subscription (subscription dan subscription2) yang mencoba mendengarkan stream yang sama.
 ```
+
+### Langkah 2: Mengedit initState() dan build() pada class StreamHomePageState di main.dart
+
+![P52](img/P52.png)
+
+![P53](img/P53.png)
+
+#### Jelaskan mengapa hal itu bisa terjadi ?
+
+![P54](img/soal11.gif)
+
+```text
+Angka yang bertambah dua kali terjadi karena ada dua subscription yang mendengarkan stream yang sama, sehingga setiap kali angka baru ditambahkan, kedua subscription tersebut memperbarui UI secara bersamaan.
+```
