@@ -196,3 +196,37 @@ Menambahkan class StreamHomePageState di main.dart telah selesai.
 
 - Method build pada StreamHomePage membangun tampilan yang menampilkan angka acak yang diterima dari stream menggunakan StreamBuilder, dengan menampilkan angka atau pesan error berdasarkan status stream.
 ```
+
+## Praktikum 7: BLoC Pattern
+
+### Langkah 1: Menambahkan class RandomNumberBloc di random_bloc.dart
+
+![P71](img/P71.png)
+
+```text
+Menambahkan class RandomNumberBloc di random_bloc.dart telah selesai.
+```
+
+### Langkah 2: Menambahkan class RandomScreenState di random_screen.dart
+
+![P72](img/P72.png)
+
+```text
+Menambahkan class RandomScreenState di random_screen.dart telah selesai.
+```
+
+### Langkah 3: Menambahkan class RandomScreen() di main.dart
+
+![P73](img/P73.png)
+
+```text
+Menambahkan class RandomScreen() di main.dart telah selesai.
+```
+
+#### Jelaskan maksud praktikum ini ! Dimanakah letak konsep pola BLoC-nya ?
+
+![P74](img/soal13.gif)
+
+```text
+Praktikum ini bertujuan untuk memahami pola BLoC (Business Logic Component) dalam memisahkan logika bisnis dari antarmuka pengguna di Flutter menggunakan Stream dan StreamController. Pada implementasinya, logika untuk menghasilkan angka acak dikelola oleh RandomNumberBloc, di mana perintah untuk menghasilkan angka baru dikirim melalui Sink (generateRandom), dan hasilnya dialirkan ke UI melalui Stream (randomNumber). UI menggunakan StreamBuilder untuk mendengarkan perubahan data secara reaktif dan menampilkan angka acak tersebut, sementara interaksi pengguna dengan tombol hanya mengirimkan event ke BLoC. Dengan pola ini, logika bisnis dan UI dipisahkan, sehingga aplikasi lebih terstruktur dan mudah dikelola.
+```
