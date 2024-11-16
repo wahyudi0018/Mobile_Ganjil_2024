@@ -37,6 +37,7 @@ class _StreamHomePageState extends State<StreamHomePage> {
   late NumberStream numberStream;
   late StreamTransformer transformer;
   late StreamSubscription subscription;
+  String values = '';
 
   void changeColor() async {
     colorStream.getColors().listen((eventColor) {
@@ -98,13 +99,25 @@ class _StreamHomePageState extends State<StreamHomePage> {
     // });
 
     // soal 9
+    // subscription = stream.listen((event) {
+    //   setState(() {
+    //     lastNumber = event;
+    //   });
+    // });
+    // subscription.onDone(() {
+    //   print('OnDone was called');
+    // });
+
+    // soal 10
     subscription = stream.listen((event) {
       setState(() {
-        lastNumber = event;
+        values += '$event -';
       });
     });
-    subscription.onDone(() {
-      print('OnDone was called');
+    subscription2 = stream.listen((event) {
+      setState(() {
+        values += '$event -';
+      });
     });
     super.initState();
   }

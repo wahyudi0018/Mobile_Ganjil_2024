@@ -127,7 +127,7 @@ Kode  mengelola stream untuk menghasilkan dan mentransformasi angka acak, memodi
 
 ## Praktikum 4: Subscribe ke stream events
 
-### Langkah 1: Mengedit initState() pada class StreamHomePageState di main.dart
+### Langkah 1: Mengedit class StreamHomePageState di main.dart
 
 ![P41](img/P41.png)
 
@@ -141,4 +141,16 @@ Kode  mengelola stream untuk menghasilkan dan mentransformasi angka acak, memodi
 - Kode subscription.cancel(): Menghentikan langganan (subscription) stream agar tidak menerima data baru dan membebaskan sumber daya terkait.  
 
 - Kode void addRandomNumber() {...}: Menghasilkan angka acak dan mengirimkannya ke stream melalui numberStream.addNumberToSink(myNum), dengan pengecekan untuk memastikan stream belum ditutup sebelum menambahkan angka baru.  
+```
+
+## Praktikum 5: Multiple stream subscriptions
+
+### Langkah 1: Mengedit initState() pada class StreamHomePageState di main.dart
+
+![P51](img/P51.png)
+
+#### Jelaskan mengapa error itu bisa terjadi ?
+
+```text
+Error terjadi karena sebuah stream hanya dapat memiliki satu listener, sementara dalam kode tersebut terdapat dua subscription (subscription dan subscription2) yang mencoba mendengarkan stream yang sama.
 ```
