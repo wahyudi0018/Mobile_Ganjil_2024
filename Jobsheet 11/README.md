@@ -159,7 +159,7 @@ Menambahkan ketergantungan pada flutter_secure_storage telah selesai.
 ![62](img/P62.png)
 
 ```text
-enambahkan metode writeToSecureStorage() dan readFromSecureStorage() pada class _MyHomePageState di main.dart telah selesai.
+Menambahkan metode writeToSecureStorage() dan readFromSecureStorage() pada class _MyHomePageState di main.dart telah selesai.
 ```
 
 ### Langkah 2: Menambahkan UI untuk menampilkan isi file yang sudah diketik
@@ -169,5 +169,5 @@ enambahkan metode writeToSecureStorage() dan readFromSecureStorage() pada class 
 ![P64](img/P64.png)
 
 ```text
-menampilkan isi file yang sudah ditulis telah selesai.
+Menampilkan isi file yang sudah ditulis telah selesai.
 ```
