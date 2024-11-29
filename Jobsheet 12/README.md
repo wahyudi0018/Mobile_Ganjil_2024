@@ -78,12 +78,48 @@ Menambahkan file pizza_detail.dart dengan class PizzaDetailScreen telah selesai.
 Detail pizza telah ditampilkan.
 ```
 
-### Langkah 5: Menambahkan tombol aksi ke detail pizza pada class MyHomePageState di main.dart
+### Langkah 5: Menambahkan tombol aksi ke detail pizza pada class _MyHomePageState di main.dart
 
 ![P25](img/P25.png)
 
 ![P26](img/P26.png)
 
 ```text
-Isi detail pizza berhasil di post
+Tambah detail pizza berhasil di post
+```
+
+## Praktikum 3: PUT-ting data
+
+### Langkah 1: Membuat Mock baru
+
+![P31](img/P31.png)
+
+```text
+Membuat Mock baru telah selesai.
+```
+
+### Langkah 2: Menambahkan metode putPizza() pada class HttpHelper di httpHelper.dart
+
+![P32](img/P32.png)
+
+```text
+Menambahkan metode putPizza() pada class HttpHelper di httpHelper.dart telah selesai.
+```
+
+### Langkah 3: Menambahkan metode savePizza() pada class PizzaDetailScreen di pizza_detail.dart
+
+![P33](img/P33.png)
+
+```text
+Menambahkan metode savePizza() dan initState() pada class PizzaDetailScreen di pizza_detail.dart telah selesai.
+```
+
+### Langkah 4: Menambahkan properti onTap untuk update detail pizza ke listTitle pada class  _MyHomePageState di main.dart
+
+![P34](img/P34.png)
+
+![P35](img/P35.png)
+
+```text
+Update detail pizza telah berhasil.
 ```

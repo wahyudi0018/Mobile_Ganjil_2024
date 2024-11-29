@@ -36,32 +36,35 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Pizza List Wahyudi'),
+        title: const Text('JSON Wahyudi'),
       ),
       body: FutureBuilder<List<Pizza>>(
         future: callPizzas(),
-        builder: (BuildContext context, AsyncSnapshot<List<Pizza>> snapshot) {
-          if (snapshot.hasError) {
+        builder: (BuildContext context, AsyncSnapshot<List<Pizza>> pizzas) {
+          if (pizzas.hasError) {
             return const Center(child: Text('Something went wrong'));
           }
 
-          if (!snapshot.hasData) {
+          if (!pizzas.hasData) {
             return const Center(child: CircularProgressIndicator());
           }
 
           return ListView.builder(
-            itemCount: (snapshot.data == null) ? 0 : snapshot.data!.length,
+            itemCount: (pizzas.data == null) ? 0 : pizzas.data!.length,
             itemBuilder: (BuildContext context, int position) {
               return ListTile(
-                title: Text(snapshot.data![position].pizzaName),
-                subtitle: Text(snapshot.data![position].description +
+                title: Text(pizzas.data![position].pizzaName),
+                subtitle: Text(pizzas.data![position].description +
                     ' - € ' +
-                    snapshot.data![position].price.toString()),
+                    pizzas.data![position].price.toString()),
                 onTap: () {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const PizzaDetailScreen(),
+                      builder: (context) => PizzaDetailScreen(
+                        pizza: pizzas.data![position],
+                        isNew: false,
+                      ),
                     ),
                   );
                 },
@@ -76,7 +79,10 @@ class _MyHomePageState extends State<MyHomePage> {
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => const PizzaDetailScreen(),
+              builder: (context) => PizzaDetailScreen(
+                pizza: Pizza(),
+                isNew: true,
+              ),
             ),
           );
         },
