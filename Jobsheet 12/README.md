@@ -31,7 +31,7 @@ Menambahkan pub http telah selesai.
 ![P13](img/P13.png)
 
 ```text
-Menambahkan pub http telah selesai.
+Menambahkan file httphelper.dart telah selesai.
 ```
 
 ### Langkah 4: Menambahkan file main.dart untuk menampilkan data JSON
@@ -122,4 +122,32 @@ Menambahkan metode savePizza() dan initState() pada class PizzaDetailScreen di p
 
 ```text
 Update detail pizza telah berhasil.
+```
+
+## Praktikum 4: DELETE-ing data
+
+### Langkah 1: Membuat Mock baru
+
+![P41](img/P41.png)
+
+```text
+Membuat Mock baru telah selesai.
+```
+
+### Langkah 2: Menambahkan metode deletePizza() pada class HttpHelper di httpHelper.dart
+
+![P42](img/P42.png)
+
+```text
+Menambahkan metode deletePizza() pada class HttpHelper di httpHelper.dart telah selesai.
+```
+
+### Langkah 3: Menambahkan widget Dismissible untuk hapus pizza ke listTitle pada class  _MyHomePageState di main.dart
+
+![P43](img/P43.png)
+
+![P44](img/P44.gif)
+
+```text
+Hapus pizza telah berhasil.
 ```

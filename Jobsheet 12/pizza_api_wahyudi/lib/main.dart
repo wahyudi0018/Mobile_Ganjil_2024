@@ -52,22 +52,31 @@ class _MyHomePageState extends State<MyHomePage> {
           return ListView.builder(
             itemCount: (pizzas.data == null) ? 0 : pizzas.data!.length,
             itemBuilder: (BuildContext context, int position) {
-              return ListTile(
-                title: Text(pizzas.data![position].pizzaName),
-                subtitle: Text(pizzas.data![position].description +
-                    ' - € ' +
-                    pizzas.data![position].price.toString()),
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => PizzaDetailScreen(
-                        pizza: pizzas.data![position],
-                        isNew: false,
-                      ),
-                    ),
-                  );
+              return Dismissible(
+                key: Key(position.toString()),
+                onDismissed: (item) {
+                  HttpHelper helper = HttpHelper();
+                  pizzas.data!.removeWhere(
+                      (element) => element.id == pizzas.data![position].id);
+                  helper.deletePizza(pizzas.data![position].id);
                 },
+                child: ListTile(
+                  title: Text(pizzas.data![position].pizzaName),
+                  subtitle: Text(
+                    '${pizzas.data![position].description} - € ${pizzas.data![position].price.toString()}',
+                  ),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => PizzaDetailScreen(
+                          pizza: pizzas.data![position],
+                          isNew: false,
+                        ),
+                      ),
+                    );
+                  },
+                ),
               );
             },
           );
