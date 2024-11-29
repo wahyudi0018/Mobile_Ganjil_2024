@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'pizza.dart';
-import 'httphelper.dart';
+import 'httpHelper.dart';
+import 'pizza_detail.dart';
 
 void main() {
   runApp(MyApp());
@@ -35,7 +36,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('JSON Wahyudi'),
+        title: const Text('Pizza List Wahyudi'),
       ),
       body: FutureBuilder<List<Pizza>>(
         future: callPizzas(),
@@ -56,8 +57,27 @@ class _MyHomePageState extends State<MyHomePage> {
                 subtitle: Text(snapshot.data![position].description +
                     ' - € ' +
                     snapshot.data![position].price.toString()),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const PizzaDetailScreen(),
+                    ),
+                  );
+                },
               );
             },
+          );
+        },
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: const Icon(Icons.add),
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const PizzaDetailScreen(),
+            ),
           );
         },
       ),
